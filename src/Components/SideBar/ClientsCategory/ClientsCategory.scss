@@ -1,0 +1,22 @@
+@use "../../../Style/colors";
+.clients-category {
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: colors.$hoverButton;
+}
+.clients-category__client-amount {
+  svg {
+    width: 20px;
+    height: auto;
+    margin-right: 5px;
+  }
+  padding: 0.1em;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

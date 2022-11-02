@@ -1,0 +1,76 @@
+@use "../../Style/colors";
+
+.header {
+  padding: 0 1em;
+  height: 60px;
+  width: 100%;
+  background: colors.$headerBg;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__selector {
+  svg {
+    width: auto;
+    height: 20px;
+  }
+  width: 170px;
+  font-size: 16px;
+  margin: 0 0.3em;
+  padding: 0.5em 1em;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: colors.$button;
+}
+.header__button {
+  cursor: pointer;
+  aspect-ratio: 1/1;
+  margin: 0 0.5em;
+  padding: 0.5em 1em;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: colors.$button;
+  color: white;
+  border: 0px transparent;
+  border-radius: 5px;
+  svg {
+    width: 100%;
+    height: auto;
+  }
+  transition: 0.2s ease-in-out;
+  &:hover {
+    background: colors.$hoverButton;
+  }
+}
+.header__selectors-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+.header__buttons-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.header__button__new-reservation {
+  svg {
+    width: auto;
+    height: 100%;
+  }
+  &:hover {
+    transform: scale(1.02);
+  }
+  transition: 0.2s ease-in-out all;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  height: 40px;
+  width: 170px;
+  background: colors.$hoverButton;
+  color: #fff;
+}

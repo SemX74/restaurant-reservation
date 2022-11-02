@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home/Home";
+import Dinner from "./Pages/Home/Rooms/Dinner/Dinner";
+import Patio from "./Pages/Home/Rooms/Patio/Patio";
+import Terrace from "./Pages/Home/Rooms/Terrace/Terrace";
+import Layout from "./Pages/Layout/Layout";
 
-function App() {
+interface AppProps {}
+
+const App: React.FC<AppProps> = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Home />}>
+          <Route index element={<Dinner />} />
+          <Route path="patio" element={<Patio />} />
+          <Route path="terrace" element={<Terrace />} />
+        </Route>
+      </Route>
+    </Routes>
   );
-}
+};
 
 export default App;

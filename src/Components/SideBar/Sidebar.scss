@@ -1,0 +1,72 @@
+@use "../../Style/colors";
+.sidebar {
+  padding-top: 0em;
+  height: 100%;
+  width: 35%;
+  background: colors.$sidebarBg;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.sidebar__top-wrapper {
+  padding: 1em;
+  padding-bottom: 0em;
+  position: sticky;
+  top: 0;
+  background: colors.$sidebarBg;
+  z-index: 10;
+  width: 100%;
+}
+.sidebar__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar-buttons__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 0.5em 0.8em;
+  background: transparent;
+  border: rgba(255, 255, 255, 0.434) 2px solid;
+  color: #fff;
+  width: 150px;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    border-color: colors.$hoverButton;
+    color: colors.$hoverButton;
+  }
+  &:first-child {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  &:last-child {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+}
+.sidebar-input {
+  border-radius: 5px;
+  text-align: center;
+  background: colors.$headerBg;
+  border: 0px;
+  width: 100%;
+  margin: 1em 0;
+  font-size: 20px;
+  padding: 0.5em 1em;
+  color: #fff;
+  &:focus {
+    outline: none;
+  }
+}
+.sidebar__clients {
+  width: 100%;
+  padding: 1em;
+}

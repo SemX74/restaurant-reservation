@@ -1,0 +1,61 @@
+@use "../../../Style/colors";
+.client {
+  margin: 0.5em 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.3em 1em;
+  border-radius: 10px;
+  transition: 0.2s;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.185);
+    transform: scale(1.01);
+    background: colors.$tableBg;
+  }
+}
+.client__time {
+  background: #2a2d37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0.3em;
+  width: 60px;
+  height: 60px;
+}
+.client__info {
+  margin-left: 1em;
+  margin-right: auto;
+}
+.client-info__phone {
+  opacity: 0.8;
+  font-weight: 400;
+}
+.client-info__guests {
+  opacity: 0.7;
+  font-weight: 100;
+}
+.client__additional {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.client-additional__perks {
+  margin-top: 0.7em;
+  height: fit-content;
+  width: 100%;
+}
+.client-additional__table {
+  border: 1px solid rgba(255, 255, 255, 0.655);
+  color: aqua;
+  width: 50px;
+  border-radius: 5px;
+  padding: 0.1em 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

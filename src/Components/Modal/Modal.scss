@@ -1,0 +1,112 @@
+@use "../../Style/colors";
+@keyframes appearance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.modal-wrapper {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.506);
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.modal-wrapper__show {
+  display: flex;
+  animation: appearance 0.2s ease-in-out;
+}
+.modal {
+  border-radius: 10px;
+  height: fit-content;
+  width: 50%;
+  background: rgb(222, 222, 222);
+}
+.modal__header {
+  padding: 1em;
+  svg {
+    opacity: 0.7;
+    height: 40px;
+    width: auto;
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  font-weight: light;
+  color: rgba(0, 0, 0, 0.744);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: fit-content;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.153);
+}
+.modal__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  background: #fff;
+}
+.modal-main__search {
+  border: 1px solid rgba(0, 0, 0, 0.084);
+  padding: 0.5em 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.modal-main-search__svg {
+  opacity: 0.3;
+  width: auto;
+  height: 25px;
+}
+.modal-main-search__add {
+  width: 30px;
+  height: auto;
+  color: colors.$Button;
+  cursor: pointer;
+}
+.modal-main-search__input {
+  width: 100%;
+  font-size: 22px;
+  border: 0;
+  padding: 0em 0.6em;
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    opacity: 0.5;
+    font-weight: lighter;
+  }
+}
+.modal__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+}
+.modal-main__details-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.modal-main__details {
+  &:first-child {
+    border-right: 1px solid rgb(241, 241, 241);
+  }
+  width: 30%;
+  height: 500px;
+  background: #fff;
+}
